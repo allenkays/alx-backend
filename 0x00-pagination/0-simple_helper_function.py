@@ -4,7 +4,7 @@ This function takes two interger arguments and returns a tuple
 """
 
 
-def index_range(page, page_size):
+def index_range(page: int, page_size: int) -> tuple:
     """
     Function returns a tuple with a starting index and end index
 
@@ -16,7 +16,7 @@ def index_range(page, page_size):
         tuple: A tuple with a start and end index (both inclusive)
     """
     if page <= 0 or page_size <= 0:
-        raise ValueError()
+        raise ValueError("Page and page_size must be positve intergers.")
     begin_index = (page - 1) * page_size
     stop_index = begin_index + page_size
     range = (begin_index, stop_index)
